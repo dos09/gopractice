@@ -7,7 +7,7 @@ import (
 var gg string = "this one is not in function"
 
 func RunVariablesDeclarationsFunctions() { //with capital letter to be exported
-	fmt.Println(" * Run_variable_declarations_functions")
+	fmt.Println(" * RunVariablesDeclarationsFunctions")
 	fmt.Println(gg)
 
 	var a, b int = 1, 2
@@ -52,6 +52,7 @@ func glupost() (x, y int) { //return named parameters
 }
 
 func praticeDefer() {
+	fmt.Println("practiceMaps")
 	defer fmt.Println("world") //arguments are evaluated immediately, but the
 	//function call is delayed
 	//A defer statement defers the execution of a function until the surrounding function returns.

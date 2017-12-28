@@ -5,6 +5,7 @@ import (
 )
 
 func RunFuncAsParameterClosure() {
+	fmt.Println(" * RunFuncAsParameterClosure")
 	funcAsParameter()
 	funcAsClosure()
 }

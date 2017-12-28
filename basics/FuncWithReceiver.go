@@ -5,18 +5,20 @@ import (
 )
 
 func RunFuncWithReceiver() {
-	fmt.Println("RunFuncWithReceiver")
+	fmt.Println(" * RunFuncWithReceiver")
 	runFuncWithPoint2AsReceiver()
 	runFuncWithMyIntAsReceiver()
 }
 
 func runFuncWithPoint2AsReceiver() {
+	fmt.Println("runFuncWithPoint2AsReceiver")
 	p := Point2{x:1, y:2}
 	p = p.IncXY()
 	fmt.Printf("p = %v\n", p)
 }
 
 func runFuncWithMyIntAsReceiver() {
+	fmt.Println("runFuncWithMyIntAsReceiver")
 	var m MyInt = 10
 	m = m.IncMyInt()
 	fmt.Printf("m = %v\n", m)	

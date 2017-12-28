@@ -5,7 +5,7 @@ import (
 )
 
 func RunIfSwitch() { //with capital letter to be exported
-	fmt.Println(" * Run_if_switch")
+	fmt.Println(" * RunIfSwitch")
 	fmt.Println(sum(5))
 	fmt.Println(sum2(5))
 	practiceIfs()
@@ -37,7 +37,7 @@ func sum2(limit int) int {
 }
 
 func practiceIfs() {
-	fmt.Println("practice_ifs")
+	fmt.Println("practiceIfs")
 	a := 1
 	if a == 1 {
 		fmt.Println("a == 1")
@@ -57,7 +57,7 @@ func practiceIfs() {
 }
 
 func practiceSwitch() {
-	fmt.Println("practice_switch")
+	fmt.Println("practiceSwitch")
 	a := 1
 	res := ""
 	switch a {
