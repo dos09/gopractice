@@ -1,4 +1,4 @@
-package basics
+package excercises
 
 import (
 	"io"
@@ -42,8 +42,8 @@ func (m rot13Reader) Read(b []byte) (int, error) {
 	return n, nil
 }
 
-func RunRot13ReaderExcercise() {
-	fmt.Println(" * RunRot13ReaderExcercise")
+func RunExcerciseRot13Reader() {
+	fmt.Println(" * RunExcerciseRot13Reader")
 	s := strings.NewReader("Lbh penpxrq gur pbqr!")
 	r := rot13Reader{s}
 	io.Copy(os.Stdout, &r)

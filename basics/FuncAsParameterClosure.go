@@ -8,6 +8,15 @@ func RunFuncAsParameterClosure() {
 	fmt.Println(" * RunFuncAsParameterClosure")
 	funcAsParameter()
 	funcAsClosure()
+	createCallFunc()
+}
+
+func createCallFunc() {
+	fmt.Println("createCallFunc")
+	res := (func() int {
+		return 1 + 1
+	}())
+	fmt.Printf("res = %d\n", res)
 }
 
 func funcAsParameter() {

@@ -3,43 +3,23 @@ package main
 import (
 	"fmt"
 	"gopractice/basics"
+	"gopractice/concurrency"
+	"gopractice/excercises"
 )
 
-//go install gozhulien
-//the exe is in bin folder
+//from parent dir of /src dir:
+//go install gopractice && bin\gopractice.go
 
 func main() {
 	fmt.Println(" * Started")
 
-	run()
+	excercises.RunExerciseWebCrawler()
 
 	fmt.Println("\n * Finished")
 }
 
 func run() {
-	fmt.Println(rot13(65))
-	fmt.Println(rot13(66))
-	fmt.Println(rot13(78)) 
-}
-
-func rot13(b byte) byte {
-	var min, max, offset byte
-	if b >= 65 && b <= 90 {
-		min = 64
-		max = 90
-	} else if b >= 97 && b <= 122 {
-		min = 96
-		max = 122
-	} else {
-		return b
-	}
-	
-	b = b + 13
-	if b > max {
-		offset = b - max
-		b = min + offset
-	}
-	return b
+	fmt.Println(3 / 2.)
 }
 
 func runBasics() {
@@ -53,5 +33,17 @@ func runBasics() {
 	basics.RunArraySlice()
 	basics.RunInterface()
 	basics.RunAssertion()
-	basics.RunRot13ReaderExcercise()
+	basics.RunDeferPanicRecover()
+}
+
+func runConcurrency() {
+	concurrency.RunChannel()
+	concurrency.RunSelect()
+	concurrency.RunDefaultSelect()
+	concurrency.RunMutex()
+}
+
+func runExcercises() {
+	excercises.RunExcerciseRot13Reader()
+	excercises.RunExerciseWebCrawler()
 }
